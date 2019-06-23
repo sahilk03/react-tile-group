@@ -41,8 +41,7 @@
     
 ## 	contactCard
 
-![contactCard](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/contactCard.png)
-
+![cards](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/contactCard.PNG)
 ```
     {
         onPressCallBack:() =>{console.log('Text')},
@@ -116,7 +115,7 @@
 ***
 ## 	statCard
 
-![statCard](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/statCard.png)
+![cards](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/statCard.PNG)
 
 ```
      {
@@ -209,7 +208,7 @@
 ***	
 ## dashCard
 
-![dashCard](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/dashCard.png)
+![cards](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/dashCard.PNG)
 
 
 ```
@@ -293,7 +292,7 @@
 ***	
 ## progressCard
 
-![progressCard](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/progressCard.png)
+![cards](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/progressCard.PNG)
 
 ```
 	{
