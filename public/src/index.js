@@ -6,7 +6,7 @@ const onPressCallBack = () => {
     console.log("onPressCallBack");
 };
 
-const tiles = [
+const tiles1 = [
     {
         onDoublePressCallBack: onPressCallBack,
         className: 'tile',
@@ -125,7 +125,7 @@ const tiles = [
     }
 ];
 
-const tiles1 = [
+const tiles2 = [
     {
         className: 'tile',
         type: "statCard",
@@ -194,7 +194,7 @@ const tiles1 = [
 
 ];
 
-const tiles2 = [
+const tiles3 = [
     {
         className: 'tile',
         type: "dashCard",
@@ -353,11 +353,11 @@ const tiles4 = [
 
 const App = () => (
     <div className="d-flex flex-wrap p-2 mt-2 justify-content-center">
-        <TileGroup className="mx-auto" tiles={[...tiles, ...tiles1, ...tiles2, ...tiles4]} />
+        <TileGroup className="mx-auto" tiles={[...tiles1, ...tiles2, ...tiles3, ...tiles4]} />
     </div>
 );
 /* 
-        <TileGroup className="mx-auto" tiles={[...tiles, ...tiles1, ...tiles2,...tiles4]} />
+        <TileGroup className="mx-auto" tiles={[ ...tiles1, ...tiles2,...tiles3,...tiles4]} />
 */
 render(<App />, document.getElementById("root"));
 

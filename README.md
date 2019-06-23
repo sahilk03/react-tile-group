@@ -40,6 +40,8 @@
 6. Configuration of Each Variants are like below: 
     
 ## 	contactCard
+
+![cards](SCREENSHOTS/contactCard.png)
 ```
     {
         onPressCallBack:() =>{console.log('Text')},
@@ -112,6 +114,9 @@
 ```
 ***
 ## 	statCard
+
+![cards](SCREENSHOTS/statCard.png)
+
 ```
      {
         className: 'tile',
@@ -202,6 +207,10 @@
 ```
 ***	
 ## dashCard
+
+![cards](SCREENSHOTS/dashCard.png)
+
+
 ```
 	{
 		className: 'tile',
@@ -282,6 +291,9 @@
 ```
 ***	
 ## progressCard
+
+![cards](SCREENSHOTS/progressCard.png)
+
 ```
 	{
 		className: 'tile',
@@ -384,7 +396,6 @@
         onPressCallBack:() =>{console.log('Text')},
         onDoublePressCallBack:() =>{console.log('Text')}
 ```        
-        
-![cards](/cards.png)
-![A nice picture](./cards.png)
-![A nice picture](/cards.png)
+     
+![A nice picture](./SCREENSHOTS/progressCard.png)
+![A nice picture](/SCREENSHOTS/progressCard.png)
