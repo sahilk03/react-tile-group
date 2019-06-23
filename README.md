@@ -398,5 +398,5 @@
 ```        
      
 ![A nice picture](./SCREENSHOTS/progressCard.png)
-![A nice picture](/SCREENSHOTS/progressCard.png)
+![A nice picture](SCREENSHOTS/contactCard.png?raw=true "Title")
 ![A nice picture](https://github.com/sahilk03/react-tile-group/blob/master/SCREENSHOTS/contactCard.PNG)
