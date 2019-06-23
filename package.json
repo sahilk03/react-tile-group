@@ -1,0 +1,39 @@
+{
+  "name": "react-tile-group",
+  "version": "1.0.38",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --mode development",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm version patch | npm run transpile"
+  },
+  "author": "sahil kumar <sahilsahil1477@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@material-ui/core": "^3.9.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "bootstrap": "^4.3.1",
+    "echarts": "^4.2.1",
+    "echarts-for-react": "^2.0.15-beta.0",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "webfontloader": "^1.6.28"
+  }
+}
