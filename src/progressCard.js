@@ -6,7 +6,7 @@ import MaterialIcon from './materialIcon';
 import { ProgressBar } from 'react-bootstrap'
 
 const ProgressCard = (props) => {
-    const { config, data } = this.props;
+    const { config, data } = props;
 
     const { descClass = "descClass", titleClass = "titleClass", noteClass = "noteClass", cardClass = "cardClass", tileClass = "tileClass", title = "", desc = "", note = "", label = "", iconOn = false, labelOn = true, progressLabelOn = false, icon: innerCardIcon = "", overrideStyles = {}, } = config;
     const { progressValue = "", progressLabel = "" } = config;

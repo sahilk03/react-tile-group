@@ -5,7 +5,7 @@ import Divider from '@material-ui/core/Divider';
 import MaterialIcon from './materialIcon';
 
 const ContactCard = (props) => {
-    const { config, data } = this.props;
+    const { config, data } = props;
 
     const { tileClass = "tileClass", cardClass = "cardClass", titleClass = "titleClass", descClass = "descClass", noteClass = "noteClass", overrideStyles = {} } = config;
     const { title = "TITLE", desc = "Descript", note = "Note", icon: innerCardIcon = "search" } = config;

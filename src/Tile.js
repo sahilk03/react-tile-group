@@ -50,7 +50,7 @@ const Tile = (props) => {
 
 
 const SquareTile = (props) => {
-    const { config, data } = this.props;
+    const { config, data } = props;
 
     const { cardClass = "cardClass", tilebody = { descStyle: {}, titleStyle: {}, noteStyle: {}, innerCard: {} } } = config;
     const { tileClass = "tileClass", title = "TITLE", desc = "Descript", titleStyle = {}, descStyle = {} } = tilebody || {};

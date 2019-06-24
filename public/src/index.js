@@ -357,15 +357,19 @@ const App = () => (
         <TileGroup className="mx-auto" tiles={[{
             className: 'tile',
             type: "fuseCard",
-            onPressCallBack: onPressCallBack,
-            data: "data",
+            title: "protocol.protocalNumber",
+            desc: "protocol.description",
+            note: "ScreenFailureRate",
+            headerTitle: "Feasibility",
+            headerNote: "Phase: ",
+            progressLabelOn: true,
             tilebody: {
-                className: 'tilebody',
-                note: "ScreenFailureRate",
-                progressLabelOn: true,
+
                 headerStyle: {
+                    background: "#4caf50"
                 },
                 progress: {
+                    progressValue: "20%",
                     //      progressLabel: "progresLabel",
                 },
                 innerCard: {
@@ -373,6 +377,7 @@ const App = () => (
                 }
             }
         }]} />
+
     </div>
 );
 /* 

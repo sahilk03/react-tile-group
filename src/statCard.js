@@ -5,7 +5,7 @@ import Divider from '@material-ui/core/Divider';
 import MaterialIcon from './materialIcon';
 
 const StatCard = (props) => {
-    const { config, data } = this.props;
+    const { config, data } = props;
     const { cardClass = "cardClass", tileClass = "tileClass", noteClass = "noteClass", descClass = "descClass", titleClass = "titleClass", title = "TITLE", desc = "Descript", note = "Note", icon: innerCardIcon = "search", overrideStyles = {} } = config;
     const onPressCallBack = config.onPressCallBack || function () { };
     const onDoublePressCallBack = config.onDoublePressCallBack || function () { };
