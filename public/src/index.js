@@ -2,8 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import TileGroup from '../../src';
 
-const onPressCallBack = () => {
+const onPressCallBack = (event, data) => {
     console.log("onPressCallBack");
+    debugger
 };
 
 const tiles1 = [
@@ -353,7 +354,25 @@ const tiles4 = [
 
 const App = () => (
     <div className="d-flex flex-wrap p-2 mt-2 justify-content-center">
-        <TileGroup className="mx-auto" tiles={[...tiles1, ...tiles2, ...tiles3, ...tiles4]} />
+        <TileGroup className="mx-auto" tiles={[{
+            className: 'tile',
+            type: "fuseCard",
+            onPressCallBack: onPressCallBack,
+            data: "data",
+            tilebody: {
+                className: 'tilebody',
+                note: "ScreenFailureRate",
+                progressLabelOn: true,
+                headerStyle: {
+                },
+                progress: {
+                    //      progressLabel: "progresLabel",
+                },
+                innerCard: {
+                    background: "#11cdef",
+                }
+            }
+        }]} />
     </div>
 );
 /* 

@@ -1,5 +1,6 @@
 const GaugeCard = (props) => {
-    const { config } = props;
+    const { config, data } = this.props;
+
     const { cardClass = "cardClass", tilebody = { descStyle: {}, titleStyle: {}, noteStyle: {}, innerCard: {} } } = config;
     const { tileClass = "tileClass", title = "TITLE", desc = "Descript", titleStyle = {}, descStyle = {} } = tilebody || {};
     const { titleClass = "titleClass" } = titleStyle;

@@ -5,7 +5,8 @@ import Divider from '@material-ui/core/Divider';
 import MaterialIcon from './materialIcon';
 
 const DashCard = (props) => {
-    const { config } = props;
+    const { config, data } = this.props;
+
     const { cardClass = "cardClass", tileClass = "tileClass", descClass = "descClass", titleClass = "titleClass", noteClass = "noteClass", title = "TITLE", desc = "Descript", note = "Note", icon: innerCardIcon = "search", overrideStyles = {} } = config;
     const onPressCallBack = config.onPressCallBack || function () { };
     const onDoublePressCallBack = config.onDoublePressCallBack || function () { };
@@ -89,7 +90,8 @@ const DashCard = (props) => {
     }
     return (
         <div className="d-inline-flex" >
-            <Card className={cardClass} style={styles.cardStyle} onClick={() => onPressCallBack()} onDoubleClick={() => onDoublePressCallBack()}>
+            <Card className={cardClass} style={styles.cardStyle} onClick={(e) => onPressCallBack(e, data)} onDoubleClick={(e) => onDoublePressCallBack(e, data)}>
+
                 <CardContent className={tileClass} style={styles.tilebodyStyle} >
                     <div className="col-12 d-flex p-0 pt-2" style={{ flex: "unset" }}>
 

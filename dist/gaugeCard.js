@@ -4,7 +4,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var GaugeCard = function GaugeCard(props) {
-    var config = props.config;
+    var _props = undefined.props,
+        config = _props.config,
+        data = _props.data;
     var _config$cardClass = config.cardClass,
         cardClass = _config$cardClass === undefined ? "cardClass" : _config$cardClass,
         _config$tilebody = config.tilebody,

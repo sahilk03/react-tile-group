@@ -51,6 +51,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Tile = function Tile(props) {
     var content = '';
     var config = props.config,
+        data = props.data,
         index = props.index;
 
     config.type = config.content ? "customCard" : config.type;
@@ -58,28 +59,28 @@ var Tile = function Tile(props) {
     switch (config.type) {
         default:
         case _constants.SQUARE_CARD:
-            content = _react2.default.createElement(SquareTile, { config: config });
+            content = _react2.default.createElement(SquareTile, { config: config, data: data });
             break;
         case _constants.STAT_CARD:
-            content = _react2.default.createElement(_statCard2.default, { config: config });
+            content = _react2.default.createElement(_statCard2.default, { config: config, data: data });
             break;
         case _constants.CONTACT_CARD:
-            content = _react2.default.createElement(_contactCard2.default, { config: config });
+            content = _react2.default.createElement(_contactCard2.default, { config: config, data: data });
             break;
         case _constants.DASH_CARD:
-            content = _react2.default.createElement(_dashCard2.default, { config: config });
+            content = _react2.default.createElement(_dashCard2.default, { config: config, data: data });
             break;
         case _constants.PROGRESS_CARD:
-            content = _react2.default.createElement(_progressCard2.default, { config: config });
+            content = _react2.default.createElement(_progressCard2.default, { config: config, data: data });
             break;
         case _constants.CUSTOM_CARD:
-            content = _react2.default.createElement(_customCard2.default, { config: config, index: index });
+            content = _react2.default.createElement(_customCard2.default, { config: config, data: data, index: index });
             break;
         case _constants.GAUGE_CARD:
-            content = _react2.default.createElement(_gaugeCard2.default, { config: config });
+            content = _react2.default.createElement(_gaugeCard2.default, { config: config, data: data });
             break;
         case _constants.FUSE_CARD:
-            content = _react2.default.createElement(_fuseCard2.default, { config: config });
+            content = _react2.default.createElement(_fuseCard2.default, { config: config, data: data });
             break;
     }
 
@@ -91,7 +92,9 @@ var Tile = function Tile(props) {
 };
 
 var SquareTile = function SquareTile(props) {
-    var config = props.config;
+    var _props = undefined.props,
+        config = _props.config,
+        data = _props.data;
     var _config$cardClass = config.cardClass,
         cardClass = _config$cardClass === undefined ? "cardClass" : _config$cardClass,
         _config$tilebody = config.tilebody,

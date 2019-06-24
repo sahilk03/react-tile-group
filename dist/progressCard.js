@@ -29,7 +29,9 @@ var _reactBootstrap = require('react-bootstrap');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProgressCard = function ProgressCard(props) {
-    var config = props.config;
+    var _props = undefined.props,
+        config = _props.config,
+        data = _props.data;
     var _config$descClass = config.descClass,
         descClass = _config$descClass === undefined ? "descClass" : _config$descClass,
         _config$titleClass = config.titleClass,
@@ -172,10 +174,10 @@ var ProgressCard = function ProgressCard(props) {
         { className: 'd-inline-flex' },
         _react2.default.createElement(
             _Card2.default,
-            { className: cardClass, style: styles.cardStyle, onClick: function onClick() {
-                    return onPressCallBack();
-                }, onDoubleClick: function onDoubleClick() {
-                    return onDoublePressCallBack();
+            { className: cardClass, style: styles.cardStyle, onClick: function onClick(e) {
+                    return onPressCallBack(e, data);
+                }, onDoubleClick: function onDoubleClick(e) {
+                    return onDoublePressCallBack(e, data);
                 } },
             _react2.default.createElement(
                 _CardContent2.default,

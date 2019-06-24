@@ -54,7 +54,7 @@ var TileGroup = function (_React$Component) {
                 _react2.default.Fragment,
                 null,
                 tiles.map(function (item, index) {
-                    return _react2.default.createElement(_Tile2.default, { key: index, index: index, config: item });
+                    return _react2.default.createElement(_Tile2.default, { key: index, index: index, config: item, data: item.data || {} });
                 })
             );
         }

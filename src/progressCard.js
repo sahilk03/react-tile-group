@@ -6,7 +6,8 @@ import MaterialIcon from './materialIcon';
 import { ProgressBar } from 'react-bootstrap'
 
 const ProgressCard = (props) => {
-    const { config } = props;
+    const { config, data } = this.props;
+
     const { descClass = "descClass", titleClass = "titleClass", noteClass = "noteClass", cardClass = "cardClass", tileClass = "tileClass", title = "", desc = "", note = "", label = "", iconOn = false, labelOn = true, progressLabelOn = false, icon: innerCardIcon = "", overrideStyles = {}, } = config;
     const { progressValue = "", progressLabel = "" } = config;
     const onPressCallBack = config.onPressCallBack || function () { };
@@ -116,7 +117,8 @@ const ProgressCard = (props) => {
     }
     return (
         <div className="d-inline-flex" >
-            <Card className={cardClass} style={styles.cardStyle} onClick={() => onPressCallBack()} onDoubleClick={() => onDoublePressCallBack()}>
+            <Card className={cardClass} style={styles.cardStyle} onClick={(e) => onPressCallBack(e, data)} onDoubleClick={(e) => onDoublePressCallBack(e, data)}>
+
                 <CardContent className={tileClass} style={styles.tilebodyStyle} >
                     <div className="d-flex p-0 pt-2 flex-row" style={{ flex: "unset" }}>
                         <div className="d-inline-block flex-column align-self-center">

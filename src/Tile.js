@@ -15,26 +15,26 @@ import { SQUARE_CARD, STAT_CARD, CONTACT_CARD, DASH_CARD, PROGRESS_CARD, CUSTOM_
 
 const Tile = (props) => {
     let content = '';
-    const { config, index } = props;
+    const { config, data, index } = props;
     config.type = (config.content) ? "customCard" : config.type;
 
     switch (config.type) {
         default:
-        case SQUARE_CARD: content = <SquareTile config={config} />;
+        case SQUARE_CARD: content = <SquareTile config={config} data={data} />;
             break;
-        case STAT_CARD: content = <StatCard config={config} />;
+        case STAT_CARD: content = <StatCard config={config} data={data} />;
             break;
-        case CONTACT_CARD: content = <ContactCard config={config} />;
+        case CONTACT_CARD: content = <ContactCard config={config} data={data} />;
             break;
-        case DASH_CARD: content = <DashCard config={config} />;
+        case DASH_CARD: content = <DashCard config={config} data={data} />;
             break;
-        case PROGRESS_CARD: content = <ProgressCard config={config} />;
+        case PROGRESS_CARD: content = <ProgressCard config={config} data={data} />;
             break;
-        case CUSTOM_CARD: content = <CustomCard config={config} index={index} />;
+        case CUSTOM_CARD: content = <CustomCard config={config} data={data} index={index} />;
             break;
-        case GAUGE_CARD: content = <GaugeCard config={config} />;
+        case GAUGE_CARD: content = <GaugeCard config={config} data={data} />;
             break;
-        case FUSE_CARD: content = <FuseCard config={config} />;
+        case FUSE_CARD: content = <FuseCard config={config} data={data} />;
             break;
     }
 
@@ -50,7 +50,8 @@ const Tile = (props) => {
 
 
 const SquareTile = (props) => {
-    const { config } = props;
+    const { config, data } = this.props;
+
     const { cardClass = "cardClass", tilebody = { descStyle: {}, titleStyle: {}, noteStyle: {}, innerCard: {} } } = config;
     const { tileClass = "tileClass", title = "TITLE", desc = "Descript", titleStyle = {}, descStyle = {} } = tilebody || {};
     const { titleClass = "titleClass" } = titleStyle;

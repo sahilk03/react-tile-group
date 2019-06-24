@@ -17,7 +17,7 @@ class TileGroup extends React.Component {
         const { tiles } = this.props;
         return (
             <React.Fragment >
-                {tiles.map((item, index) => (<Tile key={index} index={index} config={item} />))}
+                {tiles.map((item, index) => (<Tile key={index} index={index} config={item} data={item.data || {}} />))}
             </React.Fragment>
         );
     }

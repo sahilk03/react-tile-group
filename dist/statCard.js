@@ -31,7 +31,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var StatCard = function StatCard(props) {
     var _tilebodyStyle;
 
-    var config = props.config;
+    var _props = undefined.props,
+        config = _props.config,
+        data = _props.data;
     var _config$cardClass = config.cardClass,
         cardClass = _config$cardClass === undefined ? "cardClass" : _config$cardClass,
         _config$tileClass = config.tileClass,
@@ -53,7 +55,8 @@ var StatCard = function StatCard(props) {
         _config$overrideStyle = config.overrideStyles,
         overrideStyles = _config$overrideStyle === undefined ? {} : _config$overrideStyle;
 
-
+    var onPressCallBack = config.onPressCallBack || function () {};
+    var onDoublePressCallBack = config.onDoublePressCallBack || function () {};
     var styles = {
         cardStyle: {
             overflow: "visible",
@@ -140,7 +143,11 @@ var StatCard = function StatCard(props) {
         { className: 'd-inline-flex overflow-visible' },
         _react2.default.createElement(
             _Card2.default,
-            { className: cardClass + " rounded-top overflow-visible", style: styles.cardStyle },
+            { className: cardClass + " rounded-top overflow-visible", style: styles.cardStyle, onClick: function onClick(e) {
+                    return onPressCallBack(e, data);
+                }, onDoubleClick: function onDoubleClick(e) {
+                    return onDoublePressCallBack(e, data);
+                } },
             _react2.default.createElement(
                 _CardContent2.default,
                 { className: tileClass, style: styles.tilebodyStyle },
